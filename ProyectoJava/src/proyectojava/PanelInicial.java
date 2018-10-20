@@ -10,10 +10,8 @@ package proyectojava;
  * @author JAIME
  */
 public class PanelInicial extends javax.swing.JFrame {
-
-    /**
-     * Creates new form PanelInicial
-     */
+    MainPanel principal = new MainPanel();
+     
     public PanelInicial() {
         initComponents();
         this.setLocationRelativeTo(null);
@@ -28,6 +26,8 @@ public class PanelInicial extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        textoDNI = new javax.swing.JTextField();
+        cartel3 = new javax.swing.JLabel();
         titulo = new javax.swing.JLabel();
         cartel1 = new javax.swing.JLabel();
         textoContraseña = new javax.swing.JPasswordField();
@@ -41,10 +41,24 @@ public class PanelInicial extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        textoDNI.setBackground(new java.awt.Color(0, 153, 153));
+        textoDNI.setForeground(new java.awt.Color(0, 0, 153));
+        textoDNI.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textoDNIActionPerformed(evt);
+            }
+        });
+        getContentPane().add(textoDNI, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 250, 150, 30));
+
+        cartel3.setFont(new java.awt.Font("Sitka Subheading", 0, 24)); // NOI18N
+        cartel3.setForeground(new java.awt.Color(0, 0, 204));
+        cartel3.setText("ID Card");
+        getContentPane().add(cartel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, -1, -1));
+
         titulo.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 50)); // NOI18N
         titulo.setForeground(new java.awt.Color(0, 0, 102));
         titulo.setText("WSscheduler");
-        getContentPane().add(titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, 190, -1));
+        getContentPane().add(titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 40, 190, -1));
 
         cartel1.setFont(new java.awt.Font("Sitka Subheading", 0, 24)); // NOI18N
         cartel1.setForeground(new java.awt.Color(0, 0, 204));
@@ -67,12 +81,12 @@ public class PanelInicial extends javax.swing.JFrame {
                 textoNombreActionPerformed(evt);
             }
         });
-        getContentPane().add(textoNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 260, 150, 30));
+        getContentPane().add(textoNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 150, 30));
 
         cartel2.setFont(new java.awt.Font("Sitka Subheading", 0, 24)); // NOI18N
         cartel2.setForeground(new java.awt.Color(0, 0, 204));
         cartel2.setText("Username");
-        getContentPane().add(cartel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, -1, -1));
+        getContentPane().add(cartel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, -1, -1));
 
         enter.setBackground(new java.awt.Color(0, 0, 255));
         enter.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -110,7 +124,8 @@ public class PanelInicial extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void enterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enterActionPerformed
-      this.setVisible(false);
+          this.setVisible(false);
+        principal.setVisible(true);
     }//GEN-LAST:event_enterActionPerformed
 
     private void textoNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoNombreActionPerformed
@@ -124,6 +139,10 @@ public class PanelInicial extends javax.swing.JFrame {
     private void textoContraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoContraseñaActionPerformed
        
     }//GEN-LAST:event_textoContraseñaActionPerformed
+
+    private void textoDNIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoDNIActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textoDNIActionPerformed
 
     /**
      * @param args the command line arguments
@@ -155,6 +174,8 @@ public class PanelInicial extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+                new PanelInicial().setVisible(true);
+                
                 
             }
         });
@@ -163,10 +184,12 @@ public class PanelInicial extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel cartel1;
     private javax.swing.JLabel cartel2;
+    private javax.swing.JLabel cartel3;
     private javax.swing.JButton enter;
     private javax.swing.JButton exit;
     private javax.swing.JLabel fondo;
     private javax.swing.JPasswordField textoContraseña;
+    private javax.swing.JTextField textoDNI;
     private javax.swing.JTextField textoNombre;
     private javax.swing.JLabel titulo;
     // End of variables declaration//GEN-END:variables
